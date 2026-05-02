@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Report Lost or Found Items - VJTI</title>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+   <script type="text/javascript">
+   (function(){
+     emailjs.init("Yn44UCCnQKUUaI6Rc");
+   })();
+   </script>
+  <style>
+      * {
+          box-sizing: border-box;
+          font-family: 'Segoe UI', sans-serif;
+      }
+      body {
+          background: linear-gradient(135deg, #fcd8d8, #f8f8f8, #fad2d2);
+          margin: 0;
+          padding: 0;
+      }
+        .main-header {
+   background: white;
+   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+   display: flex;              
+   justify-content: space-between;
+   align-items: center;         
+   padding: 0 25px;            
+   position: fixed;             
+   top: 0;
+   left: 0;
+   right: 0;
+   height: 110px;
+   z-index: 1000;
+}
+
+
+.header-top {
+   display: flex;
+   align-items: center;
+   padding: 0;
+}
+
+
+.vjti-finds-logo {
+   position: relative;
+   height: 100%;
+   width: 200px;
+}
+
+
+.vjti-finds-logo img {
+   position: absolute;
+   height: 80px;     
+   width: auto;
+   top: 50%;          
+   right: 0;     
+   transform: translateY(-50%);
+   object-fit: contain;
+   z-index: 10;     
+}
+      .logo img {
+          width: 55px;
+          margin-right: 15px;
+      }
+      .title h1 {
+          font-size: 18px;
+          margin: 0;
+      }
+      .title p {
+          margin: 0;
+          font-size: 13px;
+          color: gray;
+      }
+      .main {
+          width: 100%;
+          max-width: 1000px;
+          margin: 120px auto 40px;
+          background: white;
+          border-radius: 12px;
+          box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+          padding: 30px;
+      }
+      .main h1 {
+   font-size: 28px;
+   font-weight: 700;
+   color: #1f2937;
+   letter-spacing: -0.5px;
+   margin-bottom: 8px;
+}
+     
+          .main p {
+   color: #6b7280;
+   font-size: 14px;
+}
+      .report-grid {
+   display: grid;
+   grid-template-columns: 1fr 1.3fr;
+   gap: 25px;
+   align-items: start;
+}
+      .form-column {
+          background: #f9fbff;
+          padding: 20px;
+          border-radius: 10px;
+          border: 1px solid #e85252;
+      }
+     h3 {
+   font-size: 15px;
+   color: #b91c1c;
+   border-bottom: 2px solid #f1f1f1;
+   padding-bottom: 8px;
+   margin-bottom: 15px;
+}
+      .input { margin-bottom: 15px; }
+      label {
+          font-size: 13px;
+          font-weight: 600;
+          margin-bottom: 5px;
+          display: block;
+      }
+      input, select, textarea {
+          width: 100%;
+          padding: 10px;
+          border-radius: 6px;
+          border: 1px solid #ddd;
+          transition: 0.3s;
+      }
+     input:focus, select:focus, textarea:focus {
+   border: 1px solid #dc2626;
+   outline: none;
+   box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.15);
+}
+      .radio-group {
+          display: flex;
+          gap: 15px;
+          align-items: center;
+          padding: 5px 0;
+      }
+      .radio-group input { width: auto; }
+      .drop-zone {
+          border: 2px dashed #fca5a5;
+   background: #fffafa;
+          padding: 10px;
+          text-align: center;
+          font-size: 13px; color: #666;
+         
+          border-radius: 8px;
+          cursor: pointer;
+      }
+      .submit-btn {
+          background: linear-gradient(135deg, #dc2626, #ef4444);
+          color: white;
+          width: 100%;
+          padding: 14px;
+          border: none;
+          border-radius: 8px;
+          font-weight: bold;
+          cursor: pointer;
+          margin-top: 15px;
+          transition: 0.3s;
+      }
+      .submit-btn:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      }
+      .submit-btn:disabled {
+          background-color: #999;
+          cursor: not-allowed;
+      }
+      @media (max-width: 768px) {
+          .report-grid {
+              grid-template-columns: 1fr;
+          }
+      }
+@media (max-width: 768px) {
+   .main-header {
+       height: 100px;
+       padding: 0 15px;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+   }
+
+
+   .header-top {
+       max-width: 65%;
+   }
+
+
+   .logo img {
+       width: 40px;
+       margin-right: 8px;
+   }
+
+
+   .title h1 {
+       font-size: 13px;
+       line-height: 1.2;
+   }
+
+
+   .title p {
+       font-size: 10px;
+   }
+
+
+   .vjti-finds-logo {
+       width: 100px;
+       height: 100%;
+       display: flex;
+       align-items: center;
+       justify-content: flex-end;
+   }
+
+
+   .vjti-finds-logo img {
+       height: 50px;
+       width: auto;
+       position: static;
+       transform: none;
+   }
+
+
+   .main {
+       margin-top: 110px;
+       padding: 15px;
+   }
+
+
+   .report-grid {
+       grid-template-columns: 1fr;
+   }
+}
+
+
+  </style>
+</head>
+<body>
+
+
+<div class="main-header">
+   <div class="header-top">
+       <div class="logo">
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbqjxPz93olFsvojgvfLcBrDNplscoMAfo5g&s" alt="VJTI Logo">
+       </div>
+       <div class="title">
+           <h1>VEERMATA JIJABAI TECHNOLOGICAL INSTITUTE</h1>
+           <p>Matunga, Mumbai-19</p>
+       </div>
+   </div>
+   <div class="vjti-finds-logo">
+       <img src="https://res.cloudinary.com/dqikyzkgs/image/upload/v1777662424/Screenshot_2026-05-02_at_12.36.43_AM_cfpojo.png" alt="VJTI Finds Logo">
+   </div>
+</div>
+
+
+<div class="main">
+  <h1>Report a Lost or Found Item</h1>
+  <p>Help reunite items by providing accurate details below.</p>
+
+
+  <form class="report-grid" onsubmit="handleReportSubmission(event)">
+
+
+      <div class="form-column">
+          <h3>REPORTING INFORMATION</h3>
+          <div class="input">
+              <label>Report Type</label>
+              <div class="radio-group">
+                  <input type="radio" name="itemType" value="lost" required> Lost
+                  <input type="radio" name="itemType" value="found" checked required> Found
+              </div>
+          </div>
+          <div class="input">
+              <label>Your Name</label>
+              <input type="text" id="reporterName" placeholder="Enter your name" required>
+          </div>
+          <div class="input">
+              <label>Your Email</label>
+              <input type="email" id="reporterEmail" placeholder="Enter your email" required>
+          </div>
+      </div>
+      <div class="form-column">
+          <h3>ITEM DETAILS</h3>
+          <div class="input">
+              <label>Item Category</label>
+              <select id="itemCategory">
+                  <option value="Electronics">Electronics</option>
+                  <option value="Wallets/Keys">Wallets/Keys</option>
+                  <option value="Documents">Documents</option>
+                  <option value="Other">Other</option>
+              </select>
+          </div>
+          <div class="input">
+              <label>Item Name</label>
+              <input type="text" id="itemName" placeholder="e.g. Blue Water Bottle" required>
+          </div>
+          <div class="input">
+              <label>Item Location</label>
+              <select id="location">
+                  <option value="Quadrangle">Quadrangle</option>
+                  <option value="Canteen">Canteen</option>
+                  <option value="Study Area">Study Area</option>
+                  <option value="Library">Library</option>
+                  <option value="Hostel">Hostel</option>
+                  <option value="Other">Other(please specify in description)</option>
+              </select>
+          </div>
+          <div class="input">
+              <label>Item Description</label>
+              <textarea id="description" rows="4" placeholder="Describe the item clearly (color, brand, marks)..." required></textarea>
+          </div>
+          <div class="input">
+              <label>Date</label>
+              <input type="date" id="itemDate" required>
+          </div>
+          <div class="input">
+              <label>Upload Image</label>
+              <div class="drop-zone">
+                  <input type="file" id="imageInput" accept="image/*" required>
+              </div>
+          </div>
+          <button type="submit" id="submitBtn" class="submit-btn">SUBMIT REPORT</button>
+      </div>
+  </form>
+</div>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+<script src="project.js"></script>
+
+
+</body>
+</html>
