@@ -60,3 +60,11 @@ VJTI Finds is a localized web-based solution developed for the Veermata Jijabai 
 https://bhumikaborkar7.github.io/VJTI-Finds/
 
 ---
+## 👥  Authors
+This project was developed by:
+
+Bhumika D. Borkar - https://github.com/bhumikaborkar7
+
+Akshita Mahapatra - https://github.com/akshitamahapatra703-gif
+
+Gauravi Rathod - https://github.com/gauravirathod0307-png
