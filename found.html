@@ -497,76 +497,7 @@
   <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
   <script src="project.js"></script>
   <script>window.onload = () => loadGalleryItems('found');</script>
-  <script>
-   const db = firebase.firestore();
-   async function searchItems() {
-   let input = document.getElementById("search-input").value.toLowerCase().trim();
-   let galleryContainer = document.getElementById("itemsGallery");
-   let resultsContainer = document.getElementById("results");
-
-
-   if (!input) {
-       resultsContainer.innerHTML = "";
-       galleryContainer.style.display = "grid";
-       loadGalleryItems('found');
-       return;
-   }
-
-
-   galleryContainer.style.display = "none";
-   resultsContainer.innerHTML = "<p style='color:white; text-align:center;'>Searching...</p>";
-
-
-
-
-   try {
-       let snapshot = await db.collection("items").get();
-       let found = false;
-     
-       resultsContainer.className = "items-gallery";
-       resultsContainer.innerHTML = "";
-
-
-
-
-       snapshot.forEach(doc => {
-           let data = doc.data();
-           let text = ((data.itemName || "") + " " + (data.description || "") + " " + (data.location || "")).toLowerCase();
-
-
-
-
-           if (text.includes(input)) {
-               found = true;
-               let div = document.createElement("div");
-               div.classList.add("item-card");
-               div.innerHTML = `
-                   <img src="${data.imageUrl || 'https://via.placeholder.com/200'}" alt="${data.itemName}">
-                   <div class="item-info">
-                       <h3>${data.itemName}</h3>
-                       <p><span class="label">Location:</span> ${data.location}</p>
-                       <p>${data.description}</p>
-                   </div>
-                   <div class="button-group">
-                       <button class="btn-claim" onclick="openClaimModal('${doc.id}')">Claim</button>
-                   </div>
-               `;
-               resultsContainer.appendChild(div);
-           }
-       });
-
-
-
-
-       if (!found) {
-           resultsContainer.innerHTML = `<p style='color:white; text-align:center; grid-column: 1 / -1;'>No items found for "${input}"</p>`;
-       }
-   } catch (error) {
-       console.error("Error searching items: ", error);
-       resultsContainer.innerHTML = "<p style='color:red;'>Error fetching results.</p>";
-   }
-}
-</script>
+ 
 </body>
 </html>
 
