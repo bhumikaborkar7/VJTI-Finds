@@ -21,7 +21,7 @@ const CLOUDINARY_PRESET = 'acale0kj';
 const EMAILJS_SERVICE_ID = 'service_57g279a';
 const REPORT_TEMPLATE_ID = 'template_n192bki';
 const CLAIM_TEMPLATE_ID = 'template_ar4ykru';
-const EMAILJS_PUBLIC_KEY = 'Yn44UCCnQKUUaI6Rc';
+const EMAILJS_PUBLIC_KEY = 'MUnsRGWyk6T9LoUVL';
 
 emailjs.init(EMAILJS_PUBLIC_KEY);
 
@@ -225,7 +225,9 @@ if (claimForm) {
            modal.style.display = "none";
            claimForm.reset();
        } catch (err) {
-           console.error(err);
+    console.error("CLAIM ERROR:", err);
+    alert(JSON.stringify(err));
+
        } finally {
            submitBtn.innerText = "SUBMIT CLAIM";
            submitBtn.disabled = false;
