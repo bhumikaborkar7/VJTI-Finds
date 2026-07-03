@@ -17,7 +17,7 @@ if (!firebase.apps.length) {
 const db = firebase.firestore();
 
 const CLOUDINARY_URL = 'https://api.cloudinary.com/v1_1/dqikyzkgs/image/upload';
-const CLOUDINARY_PRESET = 'acale0kj';
+const CLOUDINARY_PRESET = 'vjti_finds';
 const EMAILJS_SERVICE_ID = 'service_57g279a';
 const REPORT_TEMPLATE_ID = 'template_n192bki';
 const CLAIM_TEMPLATE_ID = 'template_ar4ykru';
