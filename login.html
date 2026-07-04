@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="google-site-verification" content="TIRp73VHvhYDRV11zOVCAbiP0zOlV5xBuCxQry2TVxs" />
+<meta charset="UTF-8">
+<title>Login - VJTI Finds</title>
+<style>
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+   min-height: 100vh;
+   background:linear-gradient(to right, #fefefe, #e2eaf4);
+}
+.topbar {
+   padding: 10px 50px;
+   background: white;
+   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+   display: flex;              
+   justify-content: space-between;
+   align-items: center;      
+   height: 100px;                
+}
+
+.vjti-finds-logo {
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+   width: 200px;
+   height: 100%;
+}
+
+.vjti-finds-logo img {
+   position: absolute;
+   height: 70px;    
+   width: auto;
+   top: 50%;          
+   right: 0;         
+   transform: translateY(-50%);
+   object-fit: contain;
+   transition: 0.3s ease;
+   z-index: 10;  
+   mix-blend-mode: multiply;    
+}
+.logo {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+}
+
+.logo img {
+   height: 80px;
+}
+.text {
+   display: flex;
+   flex-direction: column;
+}
+
+.logo h2 {
+   font-size: 20px;
+   font-weight: bold;
+}
+
+.logo p {
+   font-size: 14px;
+}
+.container {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 6px;
+    width: 450px;
+    height: 500px;
+    margin: 80px auto;
+    border: 1px solid #ddd;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.container h1 {
+   font-size: 40px;
+   margin-bottom: 25px;
+   font-weight: 600;
+}
+.container:hover {
+   border-color: #3b82f6;
+   transform: translateY(-2px);
+   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+.container label{
+   font-size: 20px;
+}
+.inputbox {
+   margin-bottom: 18px;
+   text-align: left;
+}
+label {
+   font-size: 14px;
+   font-weight: 500;
+}
+.required {
+   color: #d32f2f;
+}
+.inputbox input {
+   width: 100%;
+   padding: 10px;
+   border-radius: 4px;
+   border: 1px solid #ccc;
+   margin-top: 6px;
+   font-size: 14px;
+}
+.inputbox input:focus {
+   border-color: #3b82f6;
+   outline: none;
+}
+.error {
+   color: #d32f2f;
+   font-size: 12px;
+   margin-top: 4px;
+}
+.loginbtn {
+   width: 100%;
+   padding: 10px;
+   background: linear-gradient(to right, #ff6a6a,#3b82f6);
+   border: none;
+   color: white;
+   border-radius: 6px;
+   font-size: 20px;
+   cursor: pointer;
+}
+.loginbtn:hover {
+   background: linear-gradient(to right,#3b82f6, #ff6a6a);
+}
+.crawler-note { 
+   font-size: 11px; 
+   color: #94a3b8; 
+   margin-top: 25px; 
+   line-height: 1.4; 
+   border-top: 1px solid #f1f5f9; 
+   padding-top: 15px; 
+   text-align: center; 
+}
+@media (max-width: 600px) {
+.topbar {
+       padding: 10px 15px;
+       height: auto;
+       min-height: 100px;
+   }
+.logo img {
+       height: 50px;
+   }
+.logo h2 {
+       font-size: 14px;
+   }
+
+.logo p {
+       font-size: 11px;
+   }
+   
+.vjti-finds-logo {
+       width: 120px;
+   }
+   
+.vjti-finds-logo img {
+       height: 45px;
+   }
+   
+.container {
+       width: 90%;
+       margin: 40px auto;
+       padding: 20px;
+       height: auto;
+   }
+   
+.container h1 {
+       font-size: 30px;
+   }
+}
+</style>
+</head>
+<body>
+<header>
+   <div class="topbar">
+       <div class="logo">
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbqjxPz93olFsvojgvfLcBrDNplscoMAfo5g&s" alt="VJTI Logo">
+           <div class="text">
+               <h2>VEERMATA JIJABAI TECHNOLOGICAL INSTITUTE (VJTI)</h2>
+               <p>Matunga, Mumbai-19</p>
+           </div>
+       </div>
+       <div class="vjti-finds-logo">
+           <img src="https://res.cloudinary.com/dqikyzkgs/image/upload/v1777662424/Screenshot_2026-05-02_at_12.36.43_AM_cfpojo.png" alt="VJTI Finds Logo">
+       </div>
+   </div>
+</header>
+<div class="container">
+    <h1>Login</h1>
+
+    <form id="loginForm">
+
+        <div class="inputbox">
+            <label>Verify Yourself With College Email ID <span class="required">*</span></label>
+            <input type="email" id="email" placeholder="Enter your VJTI Email">
+            <div class="error" id="emailError"></div>
+        </div>
+
+        <div class="inputbox">
+            <label>Password <span class="required">*</span></label>
+            <input type="password" id="password" placeholder="Enter Password">
+            <div class="error" id="passwordError"></div>
+        </div>
+<p id="loginError" style="color:red; margin-top:8px;"></p>
+        <button type="submit" class="loginbtn">Login</button>
+
+        <p style="margin-top:15px;">
+            New User?
+            <a href="index.html">Create Account</a>
+        </p>
+
+    </form>
+
+    
+   <div class="crawler-note">
+        Official VJTI open-source lost & found tracker. This form validates structural text inputs and holds data flags strictly within secure local client memory strings.
+    </div>
+</div>
+
+</div>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+<script>
+   const firebaseConfig = {
+    apiKey: "AIzaSyAyp_4O__nfWlzd42KyvOxyZF45rYknIs0",
+    authDomain: "vjti-finds.firebaseapp.com",
+    projectId: "vjti-finds",
+    storageBucket: "vjti-finds.firebasestorage.app",
+    messagingSenderId: "694809009546",
+    appId: "1:694809009546:web:d17f1c8835aa4c7ccb7c73",
+    measurementId: "G-0SV7GHYVF3"
+};
+
+firebase.initializeApp(firebaseConfig);
+document.getElementById("loginForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value.trim();
+    document.getElementById("emailError").innerText = "";
+    document.getElementById("passwordError").innerText = "";
+    let valid = true;
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@([a-zA-Z]+\.)?vjti\.ac\.in$/;
+    if (email === "") {
+        document.getElementById("emailError").innerText = "Email is required";
+        valid = false;
+    }
+    else if (!emailPattern.test(email)) {
+        document.getElementById("emailError").innerText = "Use VJTI email only";
+        valid = false;
+    }
+    if (password === "") {
+        document.getElementById("passwordError").innerText = "Password is required";
+        valid = false;
+    }
+    if (!valid) return;
+    firebase.auth().signInWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+            localStorage.setItem("userEmail", userCredential.user.email);
+            window.location.href = "home.html";
+        })
+        .catch((error) => {
+    document.getElementById("loginError").innerText =
+        "Invalid email or password.";
+});
+});
+
+</script>
+</body>
+</html>
