@@ -4,10 +4,10 @@ VJTI Finds is a localized web-based solution developed for the Veermata Jijabai 
 
 ---
 
-## ✨ Key Features
+##  Key Features
 
 - **Verified Campus Access**  
- Entry is restricted to VJTI students and faculty using their official college emails. This prevents spam and ensures that only verified campus members can report or claim items.
+Only VJTI students and faculty can sign up and log in using their official VJTI email IDs. This prevents spam and ensures that only verified campus members can report or claim items.
 
 - **Dual-Track Galleries**  
   Separate and searchable sections for *Lost* and *Found* items, enabling quick discovery.
@@ -26,7 +26,7 @@ VJTI Finds is a localized web-based solution developed for the Veermata Jijabai 
 
 ---
 
-## 🛠️ Technical Stack
+##  Technical Stack
 
 - **Frontend:** HTML5, CSS3  
 - **Database:** Firebase Firestore (NoSQL, real-time)  
@@ -36,19 +36,21 @@ VJTI Finds is a localized web-based solution developed for the Veermata Jijabai 
 
 ---
 
-## 🏗️ File Structure
+##  File Structure
 
-- `index.html` → Entry point with email verification  
-- `home.html` → Dashboard / landing overview  
+- `index.html` → User login with VJTI email authentication
+- 'signup.html'→ User account registration
+- `home.html` → Main dashboard and navigation 
 - `report.html` → Form to submit lost/found items  
-- `lost.html` / `found.html` → Searchable item galleries  
+- `lost.html' → Display and search lost items
+- 'found.html' → Display and search found items 
 - `project.js` → Core logic (API calls, database handling)
 
 ---
 
-## 🎯 Usage Flow
+##  Usage Flow
 
-1. **Login** → Verify using your VJTI email  
+1. **Sign Up / Login** → Create an account or sign in using your VJTI email.
 2. **Report** → Submit item details (description, location, image)  
 3. **Browse** → Search through Lost/Found listings  
 4. **Claim** → Send request via automated email system  
@@ -56,11 +58,11 @@ VJTI Finds is a localized web-based solution developed for the Veermata Jijabai 
 
 ---
 
-## 🔗 Deployment Link
+##  Deployment Link
 https://bhumikaborkar7.github.io/VJTI-Finds/
 
 ---
-## 👥  Authors
+##   Authors
 This project was developed by:
 
 Bhumika D. Borkar - https://github.com/bhumikaborkar7
