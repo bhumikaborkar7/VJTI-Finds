@@ -65,7 +65,18 @@ body{
    display: flex;
    flex-direction: column;
 }
-
+.notice {
+   max-width: 900px;
+   margin: 20px auto 0;
+   padding: 14px 18px;
+   background: #fff8db;
+   border: 1px solid #facc15;
+   border-radius: 8px;
+   color: #444;
+   font-size: 14px;
+   line-height: 1.5;
+   text-align: center;
+}
 .logo h2 {
    font-size: 20px;
    font-weight: bold;
@@ -81,6 +92,8 @@ body{
 h1{
     text-align:center;
     margin-bottom:25px;
+    font-size:30px;
+    color:#070378;
 }
 .inputbox{
     margin-bottom:18px;
@@ -89,6 +102,7 @@ h1{
     display:block;
     margin-bottom:5px;
     font-weight:600;
+    color:#042269;
 }
 
 .inputbox input{
@@ -153,7 +167,7 @@ p{
 </div>
 
 <div class="inputbox">
-<label>VJTI Email</label>
+<label>Registered College Email</label>
 <input type="email" id="email">
 <div class="error" id="emailError"></div>
 </div>
@@ -175,6 +189,11 @@ p{
 Already have an account?
 <a href="login.html">Login</a>
 </p>
+</div>
+<div class="notice">
+VJTI Finds is an independent student-developed academic project created for educational purposes only.
+It is <strong>not affiliated with, endorsed by, or operated by Veermata Jijabai Technological Institute (VJTI)</strong>.
+Account creation on this page is used solely for this project's registered users.
 </div>
 
 <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
