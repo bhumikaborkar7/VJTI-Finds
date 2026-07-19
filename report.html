@@ -167,15 +167,19 @@
           background-color: #999;
           cursor: not-allowed;
       }
-    .bot-shield {
-           grid-column: span 2;
-           font-size: 11px;
-           color: #cbd5e1;
-           text-align: center;
-           margin-top: 20px;
-           padding-top: 15px;
-           border-top: 1px solid #f1f5f9;
-       }
+      .notice{
+    grid-column: 1 / -1;
+    width: 100%;
+    margin-top: 25px;
+    padding: 14px 18px;
+    background: #fff8db;
+    border: 1px solid #facc15;
+    border-radius: 8px;
+    color: #444;
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: center;
+}
       @media (max-width: 768px) {
           .report-grid {
               grid-template-columns: 1fr;
@@ -331,9 +335,11 @@
           </div>
           <button type="submit" id="submitBtn" class="submit-btn">SUBMIT REPORT</button>
       </div>
-    <div class="bot-shield">
-           Open utility submission entry module. Data points pass verification parameters strictly without handling transactional records, third-party authentication tokens, or personal finance tracking vectors.
-       </div>
+    <div class="notice">
+   VJTI Finds is an independent student-developed academic project created for educational purposes only.
+   It is <strong>not affiliated with, endorsed by, or operated by Veermata Jijabai Technological Institute (VJTI)</strong>.
+   Authentication on this page is used solely for this project's registered users.
+  </div>
   </form>
 </div>
 <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
