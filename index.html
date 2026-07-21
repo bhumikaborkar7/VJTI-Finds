@@ -84,6 +84,7 @@ body{
 }
 .container{
     width:420px;
+    max-width:90%;
     margin:70px auto;
     background:white;
     padding:35px;
@@ -137,6 +138,62 @@ button:hover{
 p{
     margin-top:18px;
     text-align:center;
+}
+@media (max-width: 600px) {
+
+.topbar{
+    padding:10px 15px;
+    height:auto;
+    min-height:100px;
+}
+
+.logo{
+    flex:1;
+}
+
+.logo img{
+    height:50px;
+}
+
+.logo h2{
+    font-size:14px;
+    line-height:1.2;
+}
+
+.text{
+    font-size:11px;
+}
+
+.vjti-finds-logo{
+    width:120px;
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+}
+
+.vjti-finds-logo img{
+    position:static;
+    transform:none;
+    height:45px;
+}
+
+.container{
+    width:90%;
+    margin:40px auto;
+    padding:20px;
+}
+
+h1{
+    font-size:30px;
+}
+
+.notice{
+    width:90%;
+    margin:20px auto;
+    font-size:13px;
+    padding:12px;
+}
+
 }
 </style>
 </head>
