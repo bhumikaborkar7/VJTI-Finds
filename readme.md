@@ -59,8 +59,7 @@ Only VJTI students and faculty can sign up and log in using their official VJTI 
 ---
 
 ##  Deployment Link
-https://bhumikaborkar7.github.io/VJTI-Finds/
-
+https://vjti-finds.vercel.app/
 ---
 ##   Authors
 This project was developed by:
