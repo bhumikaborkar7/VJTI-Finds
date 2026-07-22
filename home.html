@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>VJTI Finds</title>
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script type="text/javascript">
@@ -122,21 +123,13 @@ nav a:hover{
    transition: 0.3s;
 }
 #welcomeMessage {
-    position: absolute;
-    top: 125px;
-    right: 20px;
-    background: rgba(250, 247, 247, 0.6);
-    padding: 8px 15px;
-    border-radius: 30px;
-    color: rgb(132, 4, 4) !important ;
+    text-align: right;
+    padding: 10px 20px;
+    background: #f7f7f7;
+    color: #840404;
     font-size: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    z-index: 100;
-   
+    font-weight: 500;
 }
-
-
 .main {
    background: url('https://upload.wikimedia.org/wikipedia/commons/b/b4/VJTI_Quadrangle.jpg') no-repeat center/cover;
    height: 500px;
@@ -379,20 +372,22 @@ html {
 
 
    .logo {
-       max-width: 60%;
+       max-width:65%;
+    align-items:center;
+     gap:8px;
    }
-
-
+  
    .logo img {
-       height: 40px;
+       height: 50px;
    }
 
 
    .text h2 {
-       font-size: 11px;
+       font-size: 14px;
    }
-
-
+  .logo p{
+    font-size:12px;
+   }
    .vjti-finds-logo {
        width: 100px;
        position: static;
@@ -411,51 +406,60 @@ html {
        flex-wrap: wrap;
        padding: 10px;
    }
-
-
-   #welcomeMessage {
-       position: relative;
-       top: 0;
-       right: 0;
-       left: 0;
-       margin: 0 auto;
-       width: 100%;
-       text-align: center;
-       background: #fdf2f2;
-       padding: 8px 0;
-       font-size: 13px;
-       color: #840404 !important;
-       border-bottom: 1px solid rgba(0,0,0,0.05);
-       display: block;
-       z-index: 5;
-       box-shadow: none;
-       border-radius: 0;
-   }
-
-
+   #welcomeMessage{
+    text-align:center;
+    padding:12px;
+    font-size:14px;
+}
    .main {
        margin-top: 0;
        height: auto;
    }
+  .overlay{
+    padding:70px 20px;
+}
 
+.overlay h1{
+    font-size:42px;
+}
 
- 
-   .overlay h1 {
-       font-size: 50px;
-       margin-top: 20px;
-       word-wrap: break-word;
-   }
+.overlay p{
+    font-size:16px;
+}
 
+.buttons{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
 
-   .overlay p {
-       font-size: 20px;
-       padding: 0 10px;
-   }
+.btn{
+    width:85%;
+    margin:8px 0;
+}
+  .searchmain{
+    width:90%;
+    display:flex;
+    flex-direction:column;
+    border-radius:15px;
+}
 
+.searchmain a{
+    width:100%;
+  display:block;
+}
 
-   .searchmain {
-       width: 90%;
-   }
+.searchmain input{
+    width:100%;
+}
+
+.searchmain button{
+    width:100%;
+}
+  .content{
+    padding:20px;
+}
+
 }
 
 
@@ -483,6 +487,7 @@ html {
        <a href="#contact">Contact</a>
    </nav>
 </header>
+<div id="welcomeMessage"></div>
 <section class="main">
    <div class="overlay">
        <h1>VJTI FINDS</h1>
@@ -506,8 +511,6 @@ html {
        </div>
    </div>
 </section>
-<div id="welcomeMessage" style="padding: 10px; text-align: right; font-size: 17px; color: #555;">
-</div>
 <div id="results" style="margin-top:20px;"></div>
 
 
