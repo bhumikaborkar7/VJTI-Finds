@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Login | VJTI Finds (Academic Project)</title>
 <style>
 * {
@@ -149,42 +150,70 @@ label {
 .loginbtn:hover {
    background: linear-gradient(to right,#3b82f6, #ff6a6a);
 }
+@media (max-width: 768px) {
 
-@media (max-width: 600px) {
-.topbar {
-       padding: 10px 15px;
-       height: auto;
-       min-height: 100px;
+   .topbar {
+       height: 100px;
+       padding: 0 15px;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
    }
-.logo img {
+
+   .logo {
+       max-width: 65%;
+   }
+
+   .logo img {
+       width: 40px;
+       height: auto;
+       margin-right: 8px;
+   }
+
+   .logo h2 {
+       font-size: 13px;
+       line-height: 1.2;
+   }
+
+   .logo p {
+       font-size: 10px;
+   }
+
+   .vjti-finds-logo {
+       width: 100px;
+       height: 100%;
+       display: flex;
+       align-items: center;
+       justify-content: flex-end;
+   }
+
+   .vjti-finds-logo img {
+       position: static;
+       transform: none;
        height: 50px;
-   }
-.logo h2 {
-       font-size: 14px;
+       width: auto;
    }
 
-.logo p {
-       font-size: 11px;
-   }
-   
-.vjti-finds-logo {
-       width: 120px;
-   }
-   
-.vjti-finds-logo img {
-       height: 45px;
-   }
-   
-.container {
+   .container {
        width: 90%;
+       max-width: 450px;
        margin: 40px auto;
-       padding: 20px;
+       padding: 30px;
        height: auto;
    }
-   
-.container h1 {
+
+   .container h1 {
        font-size: 30px;
-       color: #070378;
+   }
+
+   .container label {
+       font-size: 18px;
+   }
+
+   .notice {
+       width: 90%;
+       margin: 20px auto;
+       font-size: 14px;
    }
 }
 </style>
@@ -231,7 +260,6 @@ label {
     </form>
 </div>
 
-</div>
 <div class="notice">
 VJTI Finds is an independent student-developed academic project created for educational purposes only.
 It is <strong>not affiliated with, endorsed by, or operated by Veermata Jijabai Technological Institute (VJTI)</strong>.
