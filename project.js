@@ -185,7 +185,7 @@ function openDetails(encodedData) {
            <p><strong>Date:</strong> ${item.dateOccurred}</p>
            <hr>
            <p><strong>Description:</strong> ${item.description}</p>
-           <p><strong>Contact:</strong> ${item.reporterName} (<a href="mailto:${item.reporterEmail}">${item.reporterEmail}</a>)</p>
+           <p><strong>Contact:</strong> ${item.reporterName}</p>
        `;
        modal.style.display = "block";
    }
